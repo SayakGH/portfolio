@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import cursor from "../assets/icon1.png";
 import Image from "next/image";
@@ -7,6 +7,20 @@ import lightning from "../assets/icon2.png";
 import profilepic from "../assets/profilepic.png";
 
 const Hero = () => {
+  const [text, setText] = useState("");
+  const fullText = "Sayak Ghosh";
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      setText(fullText.slice(0, index));
+      index++;
+      if (index > fullText.length) {
+        clearInterval(timer);
+      }
+    }, 150);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <div className="py-32 relative overflow-clip bg-[linear-gradient(to_bottom,#000,#2B1942_35%,#8F5C55_60%,#171717_80%)]">
       <div
@@ -15,9 +29,23 @@ const Hero = () => {
       ></div>
 
       <div className="relative">
-        <div className="text-8xl font-bold text-center">
-          <h1 className=" text-[#98B4C9]">Hi, I am</h1>
-          <h1 className="text-[#E48A57]">Sayak Ghosh</h1>
+        <div className="text-4xl md:text-6xl lg:text-8xl font-bold text-center">
+          <motion.h1
+            className="text-[#98B4C9]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Hi, I am
+          </motion.h1>
+          <h1 className="text-[#E48A57] min-h-[1.2em]">
+            {text}
+            <motion.span
+              animate={{ opacity: [1, 0] }}
+              transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
+              className="inline-block w-1 h-full bg-[#E48A57] ml-1"
+            />
+          </h1>
         </div>
         <div className="hidden 2xl:flex">
           <motion.div
