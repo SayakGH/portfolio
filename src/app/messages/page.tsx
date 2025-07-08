@@ -168,15 +168,6 @@ export default function MessagesPage() {
               Access Messages
             </motion.button>
           </form>
-
-          <div className="mt-6 text-center">
-            <a
-              href="/"
-              className="text-[#98B4C9] hover:text-[#E48A57] transition-colors text-sm"
-            >
-              ← Back to Portfolio
-            </a>
-          </div>
         </motion.div>
       </div>
     );
@@ -198,12 +189,6 @@ export default function MessagesPage() {
               </p>
             </div>
             <div className="flex items-center space-x-4">
-              <a
-                href="/"
-                className="text-[#98B4C9] hover:text-[#E48A57] transition-colors text-sm"
-              >
-                ← Portfolio
-              </a>
               <button
                 onClick={handleLogout}
                 className="flex items-center space-x-2 px-4 py-2 bg-[#E48A57]/20 text-[#E48A57] rounded-lg hover:bg-[#E48A57]/30 transition-colors"

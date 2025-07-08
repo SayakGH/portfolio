@@ -92,7 +92,7 @@ const About = () => {
               responsive, modular UIs with React, Next.js, and React Native.
             </p>
             <p className="text-lg mb-6 leading-relaxed">
-              I'm passionate about Web3 technologies and have achieved
+              I am passionate about Web3 technologies and have achieved
               recognition in hackathons, including 4th place at Code For Change
               for building a decentralized crowdfunding platform using
               blockchain technology.

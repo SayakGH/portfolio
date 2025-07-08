@@ -2,14 +2,7 @@
 import type React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-} from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -104,7 +97,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-[#E48A57] mx-auto"></div>
           <p className="text-white/80 text-xl mt-6 max-w-3xl mx-auto">
-            Ready to start your next project? Let's work together to create
+            Ready to start your next project? Lets work together to create
             something amazing!
           </p>
         </motion.div>
@@ -117,7 +110,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-[#E48A57] mb-8">
-              Let's Connect
+              Lets Connect
             </h3>
             <div className="space-y-6">
               <motion.div
